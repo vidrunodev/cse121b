@@ -11,7 +11,11 @@ myProfile.favoriteFoods = [
     "pizza",
     "hamburger"
     ];
-myProfile.hobbies = ["Videogames", "Read", "Developing a digital store project"];
+myProfile.hobbies = [
+    "Videogames",
+    "Read",
+    "Developing a digital store project"
+    ];
 myProfile.placesLived = [];
 myProfile.placesLived.push(
     {
