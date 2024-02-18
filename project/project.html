@@ -5,9 +5,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>My crypto app</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/index.html" class="active">Home</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/w01-task.html">W1 Task</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/w03-task.html">W3 Task</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/w04-task.html">W4 Task</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/w05-task.html">W5 Task</a></li>
+            <li><a href="https://vidrunodev.github.io/cse121b/project/project.html">Project</a></li>
+        </ul>
+    </nav>
     <h1>My Cryptocurrency Tracker</h1>
     <div class="pricebox">
         <div class="assetprice">
@@ -47,4 +63,8 @@
     </style>
     <script src='crypto-app.js'></script>
 </body>
+
+<footer>
+    &copy;<span id="year"></span> | Week 06 - Project | CSE 121b
+</footer>
 </html>
