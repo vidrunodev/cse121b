@@ -7,10 +7,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -25,46 +26,35 @@
         </ul>
     </nav>
     <h1>My Cryptocurrency Tracker</h1>
-    <div class="pricebox">
-        <div class="assetprice">
-            <img class="asset-logo" src="https://toppng.com/uploads/preview/bitcoin-png-bitcoin-logo-transparent-background-11562933997uxok6gcqjp.png" 
-            alt="bitcoin logo">
-            <br>
-            Bitcoin<br>
-            <span id="btc-price">$000</span>
-            <span id="btc-price-message"></span>
+        <div id="content-container">
+            <h1>My Cryptocurrency Tracker</h1>
+            <div class="pricebox">
+                <div class="assetprice">
+                    <img class="asset-logo" src="https://toppng.com/uploads/preview/bitcoin-png-bitcoin-logo-transparent-background-11562933997uxok6gcqjp.png" alt="bitcoin logo">
+                    <br>
+                    Bitcoin<br>
+                    <span id="btc-price">$000</span>
+                    <span id="btc-price-message"></span>
+                </div>
+                <div class="assetprice">
+                    <img class="asset-logo" src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzNiYXRjaDE2LTAyLnBuZw.png" alt="ethereum logo">
+                    <br>
+                    Ethereum<br>
+                    <span id="eth-price">$000</span>
+                </div>
+                <div class="assetprice">
+                    <img class="asset-logo" src="https://www.liblogo.com/img-logo/so2809sc45-solana-logo-solana-blockchain-platform-liblogo.png" alt="solana logo">
+                    <br>
+                    Solana<br>
+                    <span id="sol-price">$000</span>
+                </div>
+                <button id="refreshButton">Refresh Prices</button>
+            </div>
         </div>
-        <div class="assetprice">
-            <img class="asset-logo" src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzNiYXRjaDE2LTAyLnBuZw.png" 
-            alt="ethereum logo">
-            <br>
-            Ethereum<br>
-            <span id="eth-price">$000</span>
-        </div>
-        <div class="assetprice">
-            <img class="asset-logo" src="https://www.liblogo.com/img-logo/so2809sc45-solana-logo-solana-blockchain-platform-liblogo.png" 
-            alt="solana logo">
-            <br>
-            Solana<br>
-            <span id="sol-price">$000</span>
-        </div>
-        <button id="refreshButton">Refresh Prices</button>
-    </div>
-    <style>
-        .asset-logo {
-            width: 100px;
-            height: 100px;
-        }
-        .assetprice {
-            display: inline-block;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-    </style>
-    <script src='crypto-app.js'></script>
-</body>
 
-<footer>
-    &copy;<span id="year"></span> | Week 06 - Project | CSE 121b
-</footer>
+    <footer>
+        &copy;<span id="year"></span> | Week 06 - Project | CSE 121b
+    </footer>
+    <script src='crypto-app.js' style = "text-align: cetner;"></script>
+</body>
 </html>
