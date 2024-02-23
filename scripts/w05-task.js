@@ -24,42 +24,41 @@ const displayTemples = (temples) => {
 /* Function: getTemples() */
 const getTemples = async () => {
     try {
-    const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    if (!response.ok) {
-        throw new Error(`Error fetching temple data: ${response.statusText}`);
-    }
-    const data = await response.json();
-    templeList = data;
-    console.log(templeList);
-    displayTemples(templeList);
+        const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
+        if (!response.ok) {
+            throw new Error(`Error fetching temple data: ${response.statusText}`);
+        }
+        const data = await response.json();
+        templeList = data;
+        console.log(templeList);
+        displayTemples(templeList);
     } catch (error) {
-    console.error(error);
+        console.error(error);
     }
 };
-
 
 /* reset Function */
 const reset = () => {
     templesElement.innerHTML = '';
-    };
+};
 
 /* filterTemples Function */
 const filterTemples = (temples) => {
-    reset(); 
+    reset();
 
     const filter = document.querySelector("#filtered").value;
     switch (filter) {
         case "utah":
             displayTemples(temples.filter(t => t.location.includes("Utah")));
             break;
-        case "nonutah":
+        case "notutah":
             displayTemples(temples.filter(t => !t.location.includes("Utah")));
             break;
         case "older":
             displayTemples(temples.filter(t => new Date(t.dedicated) < new Date(1950, 0, 1)));
             break;
         case "alphabetical":
-            displayTemples(temples.slice().sort((a, b) => a.templeName.localeCompare(b.templeName)));
+            displayTemples(sortBy(temples, 'templeName'));
             break;
         case "all":
         default:
@@ -68,15 +67,18 @@ const filterTemples = (temples) => {
     }
 };
 
+/* Sorting Function: sortBy */
+const sortBy = (array, key) => {
+    return array.slice().sort((a, b) => a[key].localeCompare(b[key]));
+};
 
 /* Event Listener */
 document.querySelector("#filtered").addEventListener("change", () => {
     filterTemples(templeList);
 });
 
-/*Sorting the temples alphabetically*/
+/* Sorting the temples alphabetically */
 document.querySelector("#filtered").insertAdjacentHTML('beforeend',
     '<option value="alphabetical">Alphabetical</option>');
-
 
 getTemples();
